@@ -1,0 +1,12 @@
+
+
+services:
+  web:
+    build: ./nginx
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
+    restart: always
+    user: root
